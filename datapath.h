@@ -30,13 +30,13 @@ struct MultiCycleReg{  //additional multicycle registers
 //Instruction steps
 void IF(ofstream &out, MultiCycleReg &mc, vector<string> &code){
   mc.IR=code[PC]; //get instruction, store in IR
+  PC = PC+1; //increment PC
   printStep(out, "IF");
   return;
 }
 
 void ID(ofstream &out, MultiCycleReg &mc, instruction &inst, int *reg){
   string subC;
-  PC = PC+1; //increment PC
   subC = mc.IR.substr(0,6);
   inst.op = subC;
   subC=mc.IR.substr(6,5); //getting rs
