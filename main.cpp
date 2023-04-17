@@ -2,6 +2,7 @@
 #include <fstream>
 #include <sstream>
 #include <string>
+//#include <stdlib.h>
 #include <vector>
 #include "maintenance.h"
 #include "datapath.h"
@@ -9,7 +10,6 @@ using namespace std;
 int step, inum, PC;
 int main(){
   
-//file loading
   string inputFile, outputFile;
   char run='y';
   ifstream fileInput;
