@@ -37,6 +37,7 @@ void IF(ofstream &out, MultiCycleReg &mc, vector<string> &code){
 
 void ID(ofstream &out, MultiCycleReg &mc, instruction &inst, int *reg){
   string subC;
+
   subC = mc.IR.substr(0,6);
   inst.op = subC;
   subC=mc.IR.substr(6,5); //getting rs
