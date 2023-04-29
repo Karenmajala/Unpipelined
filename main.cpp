@@ -42,7 +42,8 @@ int main(){
   while(!fileInput.eof()){
    string line;
    fileInput>>line;
-   code.push_back(line);
+   if(line.length()>0){
+   code.push_back(line);}
   }
   
   //cycle steps
