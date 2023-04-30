@@ -63,6 +63,7 @@ void loadregisters(ifstream &input, int* reg){
         R= stoi(subR);
         input>>line;
         reg[R] = stoi(line);
+        reg[0]= 0;
         input>>line;
       }while(line!="MEMORY");
   }return;
